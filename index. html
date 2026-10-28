@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>संच मान्यता त्रुटी व खुलासा फॉर्म</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            background: #ffffff;
+            padding: 30px;
+            margin: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        .sub-header {
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #444;
+        }
+        input[type="text"], input[type="date"], textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+        fieldset {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            background-color: #fafafa;
+        }
+        legend {
+            font-weight: bold;
+            color: #d9534f;
+            padding: 0 5px;
+        }
+        .checkbox-group {
+            margin-bottom: 10px;
+        }
+        .checkbox-group label {
+            font-weight: normal;
+            display: inline;
+            margin-left: 8px;
+            color: #333;
+        }
+        .btn-submit {
+            background-color: #28a745;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .btn-submit:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>समूह साधन केंद्र, कन्या नागापूर</h2>
+    <div class="sub-header">ता. परळी वै. जि. बीड | संच मान्यता तपासणी व खुलासा अर्ज</div>
+
+    <form action="#" method="POST">
+        
+        <!-- शाळेची माहिती -->
+        <div class="form-group">
+            <label for="school_name">शालिचे नाव:</label>
+            <input type="text" id="school_name" name="school_name" value="रमाबाई आंबेडकर विद्यालय, नागापूर" required>
+        </div>
+
+        <div class="form-group">
+            <label for="udise_code">युडायस कोड (UDISE Code):</label>
+            <input type="text" id="udise_code" name="udise_code" value="27270804003" required>
+        </div>
+
+        <div class="form-group">
+            <label for="outward_no">जावक क्रमांक व दिनांक:</label>
+            <input type="text" id="outward_no" name="outward_no" value="जा.क्र. 07/2026 दि. 26/10/2026">
+        </div>
+
+        <div class="form-group">
+            <label for="inspection_date">तपासणी भेट दिनांक:</label>
+            <input type="date" id="inspection_date" name="inspection_date" value="2026-10-26">
+        </div>
+
+        <!-- त्रुटींची यादी (चेकबॉक्स स्वरूपात) -->
+        <fieldset>
+            <legend>आढळून आलेल्या त्रुटी (सुधारणेसाठी)</legend>
+            
+            <div class="checkbox-group">
+                <input type="checkbox" id="error1" name="errors[]" value="1">
+                <label for="error1">वर्ग १ च्या प्रवेश फॉर्मवर पालकांची स्वाक्षरी, मुख्याध्यापकांची सही नसणे व फॉर्म अर्धवट असणे.</label>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="error2" name="errors[]" value="2">
+                <label for="error2">वर्ग २ ते ७ मधील दि. ३० सप्टेंबर २०२६ पर्यंतच्या विद्यार्थ्यांचे अभिलेखे अद्यावत व प्रवेश फॉर्म नसणे.</label>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="error3" name="errors[]" value="3">
+                <label for="error3">दि. १५ ते ३० सप्टेंबर दरम्यान अचानक विद्यार्थी हजेरीपट/प्रवेश निर्गमवर नोंदवणे आणि प्रवेश फॉर्म नसणे.</label>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="error4" name="errors[]" value="4">
+                <label for="error4">प्रवेश निर्गम रजिस्टर क्रमांक हजेरीपटावरील क्रमांकाशी न जुळणे किंवा जागा रिकाम्या असणे.</label>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="error5" name="errors[]" value="5">
+                <label for="error5">सप्टेंबर महिन्यात विद्यार्थी संख्या वाढ होऊनही ऑफलाइन शालेय अभिलेखे उपलब्ध नसणे.</label>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="error6" name="errors[]" value="6">
+                <label for="error6">सरल/स्टुडंट पोर्टल वरील वर्ग आणि हजेरीपटावरील वर्ग यात तफावत असणे.</label>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="error7" name="errors[]" value="7">
+                <label for="error7">संच मान्यतेसाठी फॉरवर्ड केलेली व हजेरीपटावरील विद्यार्थी संख्या न जुळणे.</label>
+            </div>
+        </fieldset>
+
+        <!-- मुख्याध्यापकाचा खुलासा / शेरा -->
+        <div class="form-group">
+            <label for="teacher_remark">मुख्याध्यापकाचा लेखी खुलासा / शेरा:</label>
+            <textarea id="teacher_remark" name="teacher_remark" placeholder="येथे आपला लेखी खुलासा लिहा..." required></textarea>
+        </div>
+
+        <!-- सबमिट बटण -->
+        <button type="submit" class="btn-submit">खुलासा सादर करा</button>
+
+    </form>
+</div>
+
+</body>
+</html>
